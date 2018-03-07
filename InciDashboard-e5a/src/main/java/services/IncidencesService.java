@@ -1,6 +1,10 @@
 package services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import entities.Incidence;
+import repositories.IncidencesRepository;
 
 /**
  * Servicio que accede a la base de datos para modificar
@@ -12,4 +16,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class IncidencesService {
 
+	@Autowired
+	private IncidencesRepository incidencesRepository;
+	
+	public void updateIncidence(Incidence incidence)
+	{
+		
+	}
+	
 }

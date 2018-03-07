@@ -32,11 +32,6 @@ public class InciDashboard {
 		return "";
 	}
 	
-	public String updateIncidences(Model model)
-	{
-		return "";
-	}
-	
 	public String getIncidences(Model model)
 	{
 		return "";
