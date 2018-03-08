@@ -11,7 +11,7 @@ Ismael Cadenas Alonso (UO251025)
 
 Daniel Bermejo Blanco (UO204115)
 
-# Para ejecutar (falta completar)
+# Para ejecutar (falta por completar)
 
 Desde la carpeta del proyecto:
 
