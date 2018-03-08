@@ -3,10 +3,10 @@ InciDashboard e5a
 
 # Autores
 
-Tania Álvarez Díaz 
+Tania Álvarez Díaz (UO244856)
 
-Alejandro Barrera Sánchez 
+Alejandro Barrera Sánchez (UO251893)
 
-Ismael Cadenas Alonso 
+Ismael Cadenas Alonso (UO251025)
 
-Daniel Bermejo Blanco
+Daniel Bermejo Blanco (UO204115)
