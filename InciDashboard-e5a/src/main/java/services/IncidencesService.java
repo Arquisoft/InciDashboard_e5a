@@ -7,8 +7,8 @@ import entities.Incidence;
 import repositories.IncidencesRepository;
 
 /**
- * Servicio que accede a la base de datos para modificar
- * los datos de las incidencias.
+ * Servicio que accede a la base de datos para modificar los datos de las
+ * incidencias.
  * 
  * @author Tania Álvarez Díaz
  *
@@ -16,12 +16,11 @@ import repositories.IncidencesRepository;
 @Service
 public class IncidencesService {
 
-	@Autowired
-	private IncidencesRepository incidencesRepository;
-	
-	public void updateIncidence(Incidence incidence)
-	{
-		
-	}
-	
+    @Autowired
+    private IncidencesRepository incidencesRepository;
+
+    public void updateIncidence(Incidence incidence) {
+
+    }
+
 }

@@ -9,11 +9,10 @@ import services.IncidencesService;
 @Controller
 public class DBManagement {
 
-	@Autowired
-	private IncidencesService incidencesService;
-	
-	public String updateIncidences(Model model)
-	{
-		return "";
-	}
+    @Autowired
+    private IncidencesService incidencesService;
+
+    public String updateIncidences(Model model) {
+	return "";
+    }
 }
