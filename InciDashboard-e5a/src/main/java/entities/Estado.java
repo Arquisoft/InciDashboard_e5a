@@ -1,28 +1,30 @@
 package entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Estado")
 public class Estado {
 
-    private final static int ABIERTA = 0;
-    private final static int EN_PROCESO = 1;
-    private final static int CERRADA = 2;
-    private final static int ANULADA = 3;
+    private String valor;
 
-    public int getAbierta() {
-	return ABIERTA;
+    public String getValor() {
+        return valor;
     }
 
-    public int getEnProceso() {
-	return EN_PROCESO;
+    public void setValor(String valor) {
+        this.valor = valor;
     }
 
-    public int getCerrada() {
-	return CERRADA;
+    /**
+     * Constructo con parametros
+     * @param valor
+     */
+    public Estado (String valor) {
+	super();
+	setValor(valor);
     }
-
-    public int getAnulada() {
-	return ANULADA;
-    }
-
+    
     /**
      * Constructor
      */
