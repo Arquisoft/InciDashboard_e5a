@@ -1,13 +1,9 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "User")
@@ -21,10 +17,14 @@ public class User implements Serializable {
     private String nombre;
     private Location localizacion;
     private String email;
+    @Column(unique = true)
     private String identificador; // Es unico y es el nombre de usuario
     private String password;
     private String tipo;
 
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Incidence> incidencias;
+    
     /**
      * Constructor vacio
      */

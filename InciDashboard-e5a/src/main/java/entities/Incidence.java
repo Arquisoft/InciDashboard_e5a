@@ -3,11 +3,7 @@ package entities;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Incidence")
@@ -16,6 +12,7 @@ public class Incidence {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne
     private User usuario;
     private String contraseña;
     private String descripcion;
@@ -23,6 +20,7 @@ public class Incidence {
     private List<String> etiquetas;
     private HashMap<String, Integer> campos;
     private Estado estado;
+    
 
     public User getUsuario() {
 	return usuario;
