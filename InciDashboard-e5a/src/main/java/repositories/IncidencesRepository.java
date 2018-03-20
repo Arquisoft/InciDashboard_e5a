@@ -10,7 +10,7 @@ import entities.User;
 
 public interface IncidencesRepository extends CrudRepository<Incidence, Long>{
 
-	@Query("SELECT i FROM Incidence i WHERE i.user = ?1")
-    public Page<Incidence> findIncidences(User user);
+	@Query("SELECT i FROM Incidence i WHERE i.user.identificador = ?1")
+    public Page<Incidence> findIncidences(String identificador);
 
 }

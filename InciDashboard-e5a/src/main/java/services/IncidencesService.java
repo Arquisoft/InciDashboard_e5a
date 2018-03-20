@@ -28,8 +28,8 @@ public class IncidencesService {
     * @param usuario
     * @return
     */
-    public Page<Incidence> getIncidences(User usuario) {
-    	return incidencesRepository.findIncidences(usuario);
+    public Page<Incidence> getIncidences(String identificador) {
+    	return incidencesRepository.findIncidences(identificador);
     }
     
     public void updateIncidence(Incidence incidence) {
