@@ -19,6 +19,8 @@ public class Incidence {
     private Location localizacion;
     private List<String> etiquetas;
     private HashMap<String, Integer> campos;
+    @OneToOne
+    @JoinColumn(name = "estado_id")
     private Estado estado;
     
 
