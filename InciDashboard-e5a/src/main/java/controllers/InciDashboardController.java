@@ -37,7 +37,7 @@ public class InciDashboardController {
     @RequestMapping("/inciDashboard/detailsIncidence/{id}")
     public String getIncidenceInfo(Model model, @PathVariable Long id) {
 	model.addAttribute("incidence", incidencesService.getIncidence(id));
-	return "incidence";
+	return "detailsIncidence";
     }
 
     public String modifyInfo(Model model) {
