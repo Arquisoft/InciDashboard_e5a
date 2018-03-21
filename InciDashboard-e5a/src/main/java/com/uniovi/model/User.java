@@ -1,6 +1,5 @@
 package com.uniovi.model;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
@@ -11,13 +10,13 @@ import javax.persistence.*;
  * @author Tania Álvarez Díaz
  *
  */
+@Entity
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
-	@Transient //TODO
 	private Location localizacion;
 	private String email;
 	@Column(unique = true)
@@ -25,8 +24,8 @@ public class User {
 	private String password;
 	private String tipo;
 
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-	private List<Incidence> incidencias;
+//	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+//	private List<Incidence> incidencias;
 
 	/**
 	 * Constructor vacio
@@ -88,7 +87,7 @@ public class User {
 		return password;
 	}
 
-	private void setPassword(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 

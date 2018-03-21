@@ -23,7 +23,7 @@ public class InciDashboardController {
 
 	public List<SseEmitter> emitters = Collections.synchronizedList(new ArrayList<SseEmitter>());
 
-	@RequestMapping("/inciDashboard/listIncidences")
+	@RequestMapping("/listIncidences")
 	public String showInfo(Model model) {
 		List<Incidence> incidencias = incidenceService.getIncidences();
 		model.addAttribute("incidencesList", incidencias);

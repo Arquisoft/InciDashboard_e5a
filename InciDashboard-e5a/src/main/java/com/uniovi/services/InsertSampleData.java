@@ -8,13 +8,13 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.uniovi.model.Estado;
 import com.uniovi.model.Incidence;
 import com.uniovi.model.User;
 import com.uniovi.repositories.IncidencesRepository;
+import com.uniovi.repositories.UsersRepository;
 
 @Service
 public class InsertSampleData {
@@ -23,6 +23,9 @@ public class InsertSampleData {
 	
 	@Autowired
 	IncidencesRepository incidenceRepository;
+	
+	@Autowired
+	UserService userService;
 
 	@PostConstruct
 	public void init() {
@@ -50,8 +53,10 @@ public class InsertSampleData {
 		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
 				new HashMap<String, String>(), Estado.ABIERTA));
 		
+		userService.addUser(new User("Admin", "", "admin@gmail.com", "admin", "Operador", "1234"));
+		
+		
 		incidenceRepository.save(incidences);
-		//usuariosRepository.save(usuarios);
 		
 	}
 
