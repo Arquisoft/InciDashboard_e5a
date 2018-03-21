@@ -1,4 +1,4 @@
-package entities;
+package com.uniovi.model;
 
 import javax.persistence.Embeddable;
 

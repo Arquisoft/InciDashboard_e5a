@@ -5,30 +5,38 @@
 	<!-- Barra de Navegación superior -->
 	<nav th:replace="fragments/nav" />
 	<div class="container">
-		<h2>Incidencias</h2>
-		<p>Incidences</p>
+		<h2 th:text="Titulo"></h2>
+		<p>Incidencias</p>
 		<div class="table-responsive">
-			<table class="table table-hover">
+			<table class="table table-hover" id="myTable">
 				<thead>
 					<tr>
-						<th>Descripcion</th>
-						<th>Localizacion</th>
-						<th>Estado</th>
+						<th th:text="ID"></th>
+						<th th:text="Descripcion"></th>
+						<th th:text="Localizacion"></th>
+						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="incidence : ${incidencesList}">
+						<td th:text="${incidence.id}"></td>
 						<td th:text="${incidence.descripcion}"></td>
-						<td
-							th:text="${incidence.localizacion.latitud - incidence.localizacion.longitud}"></td>
-						<td th:text="${incidence.estado.valor}"></td>
-					</tr>
+						<td th:text="${incidence.localizacion}"></td>
+					</tr>					
 				</tbody>
 			</table>
 		</div>
-		<footer th:replace="fragments/pagination" />
 	</div>
+	
+	<script th:inline="javascript">
+  	  /*<![CDATA[*/
+	  	var evtSource = new EventSource("/getEmitter");
+	  	evtSource.onmessage = function(e) {
+	  		$("#myTable").find('tbody').append( "<tr><td>" + e.data + "</td><td>" + e.data + "</td><td>" + e.data + "</td></tr>" );
+	  	}
+	  /*]]>*/
+  </script> 
 </body>
 </html>
