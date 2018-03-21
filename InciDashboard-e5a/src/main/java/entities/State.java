@@ -2,9 +2,15 @@ package entities;
 
 import javax.persistence.*;
 
+/**
+ * Clase que representa el estado de una incidencia
+ * 
+ * @author Tania Álvarez Díaz
+ *
+ */
 @Entity
 @Table(name = "Estado")
-public class Estado {
+public class State {
 
     @Id
     @GeneratedValue
@@ -33,7 +39,7 @@ public class Estado {
      * 
      * @param valor
      */
-    public Estado(String valor) {
+    public State(String valor) {
 	super();
 	setValor(valor);
     }
@@ -41,7 +47,7 @@ public class Estado {
     /**
      * Constructor
      */
-    public Estado() {
+    public State() {
 
     }
 }

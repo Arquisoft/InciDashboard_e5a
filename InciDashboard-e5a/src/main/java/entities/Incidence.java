@@ -5,6 +5,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+ * Clase que representa una incidencia
+ * 
+ * @author Tania Álvarez Díaz
+ *
+ */
 @Entity
 @Table(name = "Incidence")
 public class Incidence {
@@ -21,8 +27,7 @@ public class Incidence {
     private HashMap<String, Integer> campos;
     @OneToOne
     @JoinColumn(name = "estado_id")
-    private Estado estado;
-    
+    private State estado;
 
     public User getUsuario() {
 	return usuario;
@@ -73,16 +78,16 @@ public class Incidence {
 	this.campos = campos;
     }
 
-    public Estado getEstado() {
+    public State getEstado() {
 	return estado;
     }
 
-    public void setEstado(Estado estado) {
+    public void setEstado(State estado) {
 	this.estado = estado;
     }
 
     public Incidence(User usuario, String contraseña, String descripcion, Location localizacion, List<String> etiquetas,
-	    HashMap<String, Integer> campos, Estado estado) {
+	    HashMap<String, Integer> campos, State estado) {
 	super();
 	this.usuario = usuario;
 	this.contraseña = contraseña;

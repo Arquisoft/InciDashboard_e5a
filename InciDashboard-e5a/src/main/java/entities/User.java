@@ -5,6 +5,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+ * Clase que representa a los usuarios de la aplicacion
+ * 
+ * @author Tania Álvarez Díaz
+ *
+ */
 @Entity
 @Table(name = "User")
 public class User implements Serializable {
@@ -24,7 +30,7 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Incidence> incidencias;
-    
+
     /**
      * Constructor vacio
      */
