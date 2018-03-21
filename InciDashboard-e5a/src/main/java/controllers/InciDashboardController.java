@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import entities.Incidence;
 import services.IncidencesService;
+import services.StatesService;
 
 /**
  * Controlador para gestionar las incidencias
@@ -24,6 +25,9 @@ public class InciDashboardController {
 
     @Autowired
     private IncidencesService incidencesService;
+    
+    @Autowired
+    private StatesService statesService;
 
     @RequestMapping("/inciDashboard/listIncidences")
     public String showInfo(Pageable pageable, Model model, Principal principal) {
@@ -40,7 +44,10 @@ public class InciDashboardController {
 	return "detailsIncidence";
     }
 
-    public String modifyInfo(Model model) {
+    @RequestMapping("/inciDashboard/modifyStateIncidence/{id}")
+    public String modifyInfo(Model model, @PathVariable Long id) {
+	
+	model.addAttribute("listStates", statesService.getStates());
 	return "";
     }
     

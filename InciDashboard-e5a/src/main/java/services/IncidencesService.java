@@ -5,12 +5,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import entities.Incidence;
-import entities.User;
 import repositories.IncidencesRepository;
 
 /**
- * Servicio que accede a la base de datos para modificar los datos de las
- * incidencias.
+ * Servicio para gestionar las incidencias
  * 
  * @author Tania Álvarez Díaz
  *
