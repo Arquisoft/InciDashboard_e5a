@@ -66,7 +66,7 @@ public class MessageListener {
 	    
 	    	Set<Propiedad> propiedades =  getSetPropiedades(data, obj) != null ? getSetPropiedades(data, obj) : new HashSet<Propiedad>();
 	    	//Cargo el agente de la base de datos
-	    	User user = usersRepository.findUserByIdentificadorAndPassword(identificador, password);
+	    	User user = usersRepository.findByIdentificador(identificador);
 	    	
 	    	Incidence incidence;
 	    	if(identificador != null && user != null) {
