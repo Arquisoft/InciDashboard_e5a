@@ -11,21 +11,22 @@ import javax.persistence.Transient;
 
 @Entity
 public class Incidence {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private String descripcion;
-    private String localizacion;
-    @Transient
-    private Set<String> etiquetas;
-    private HashMap<String, String> campos;
-    private String estado;
-    
-    public Incidence(){}   
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String descripcion;
+	private String localizacion;
+	@Transient
+	private Set<String> etiquetas;
+	private HashMap<String, String> campos;
+	private Estado estado;
+
+	public Incidence() {
+	}
 
 	public Incidence(String descripcion, String localizacion, Set<String> etiquetas, HashMap<String, String> campos,
-			String estado) {
+			Estado estado) {
 		super();
 		this.descripcion = descripcion;
 		this.localizacion = localizacion;
@@ -33,9 +34,7 @@ public class Incidence {
 		this.campos = campos;
 		this.estado = estado;
 	}
-	
-	
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -76,11 +75,11 @@ public class Incidence {
 		this.campos = campos;
 	}
 
-	public String getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 
@@ -120,8 +119,5 @@ public class Incidence {
 			return false;
 		return true;
 	}
-    
-    
 
-    
 }
