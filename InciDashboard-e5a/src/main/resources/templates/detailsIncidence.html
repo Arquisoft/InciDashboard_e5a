@@ -13,13 +13,13 @@
 			<div class="panel-body" th:text="${incidence.usuario.identificador}"></div>
 		</div>
 		<div class="panel panel-default">
-			<div class="panel-heading">Descripción</div>
-			<div class="panel-body" th:text="${incidence.descripcion}">
-			</div>
+			<div class="panel-heading">Descripcion</div>
+			<div class="panel-body" th:text="${incidence.descripcion}"></div>
 		</div>
 		<div class="panel panel-default">
-			<div class="panel-heading">Localización</div>
-			<div class="panel-body" th:text="${incidence.localizacion.latitud - incidence.localizacion.longitud}"></div>
+			<div class="panel-heading">Localizacion</div>
+			<div class="panel-body"
+				th:text="${incidence.localizacion.latitud - incidence.localizacion.longitud}"></div>
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">Estado</div>

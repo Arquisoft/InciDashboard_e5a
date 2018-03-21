@@ -43,5 +43,10 @@ public class InciDashboardController {
     public String modifyInfo(Model model) {
 	return "";
     }
+    
+    @RequestMapping("/login")
+    public String login() {
+	return "login";
+    }
 
 }
