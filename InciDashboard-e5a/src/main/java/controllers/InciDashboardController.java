@@ -1,15 +1,17 @@
 package controllers;
 
 import java.security.Principal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import entities.Incidence;
 import services.IncidencesService;
@@ -22,6 +24,8 @@ import services.IncidencesService;
  */
 @Controller
 public class InciDashboardController {
+	
+	public List<SseEmitter> emitters = Collections.synchronizedList( new ArrayList<SseEmitter>());
 
     @Autowired
     private IncidencesService incidencesService;
@@ -45,5 +49,21 @@ public class InciDashboardController {
 
     public String getIncidences(Model model) {
 	return "";
+    }
+    
+	@RequestMapping("/getEmitter")
+	public SseEmitter getEmitter() {
+		return nuevoEmitter();
+	}
+    
+    public SseEmitter nuevoEmitter() {
+    	SseEmitter emitter = new SseEmitter(0L);
+    	
+    	emitter.onTimeout(() -> emitters.remove(emitter));
+    	emitter.onCompletion(() -> emitters.remove(emitter));
+    	
+    	emitters.add(emitter);
+    	
+    	return emitter;
     }
 }
