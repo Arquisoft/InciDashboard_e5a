@@ -1,4 +1,4 @@
-package apacheKafka;
+package com.uniovi.apacheKafka;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,8 @@ import org.springframework.http.MediaType;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import controllers.InciDashboardController;
+import com.uniovi.controllers.InciDashboardController;
+
 import java.io.IOException;
 
 import javax.annotation.ManagedBean;
@@ -24,6 +25,7 @@ public class MessageListener {
 	//Puede que esta clase no se tenga que utilizar pero asi seran mas o menos los metodos que recojan incidencias de kafka
     @KafkaListener(topics = "incidencia")
     public void listen(String data) {
+    	System.out.println(data);
         for(SseEmitter emitter : controller.emitters) {
         	try {
 				emitter.send(data, MediaType.APPLICATION_JSON);
