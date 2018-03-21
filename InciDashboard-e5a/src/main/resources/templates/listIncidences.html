@@ -5,25 +5,25 @@
 	<!-- Barra de Navegación superior -->
 	<nav th:replace="fragments/nav" />
 	<div class="container">
-		<h2 th:text="#{users.title}"></h2>
+		<h2>Incidencias</h2>
 		<p>Incidences</p>
 		<div class="table-responsive">
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th th:text="#{name}"></th>
-						<th th:text="#{description}"></th>
-						<th th:text="#{location}"></th>
-						<th class="col-md-1"></th>
+						<th>Descripcion</th>
+						<th>Localizacion</th>
+						<th>Estado</th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="incidence : ${incidencesList}">
-						<td th:text="${incidence.name}"></td>
-						<td th:text="${incidence.description}"></td>
-						<td th:text="${incidence.location}"></td>
+						<td th:text="${incidence.descripcion}"></td>
+						<td
+							th:text="${incidence.localizacion.latitud - incidence.localizacion.longitud}"></td>
+						<td th:text="${incidence.estado.valor}"></td>
 					</tr>
 				</tbody>
 			</table>
