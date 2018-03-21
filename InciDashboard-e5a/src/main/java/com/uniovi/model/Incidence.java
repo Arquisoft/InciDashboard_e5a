@@ -15,6 +15,7 @@ public class Incidence {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	private String nombre;
 	private String descripcion;
 	private String localizacion;
 	@Transient
@@ -41,6 +42,14 @@ public class Incidence {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public String getDescripcion() {
