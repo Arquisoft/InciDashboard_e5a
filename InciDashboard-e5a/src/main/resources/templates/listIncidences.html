@@ -34,7 +34,8 @@
   	  /*<![CDATA[*/
 	  	var evtSource = new EventSource("/getEmitter");
 	  	evtSource.onmessage = function(e) {
-	  		$("#myTable").find('tbody').append( "<tr><td>" + e.data + "</td><td>" + e.data + "</td><td>" + e.data + "</td></tr>" );
+	  		var obj = JSON.parse(e.data);
+	  		$("#myTable").find('tbody').append( "<tr><td>" + obj.id + "</td><td>" + obj.descripcion + "</td><td>" + obj.localizacion + "</td></tr>" );
 	  	}
 	  /*]]>*/
   </script> 
