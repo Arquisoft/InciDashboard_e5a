@@ -63,6 +63,14 @@ public class InciDashboardController {
 		/** COMPLETAR: CREAR EL HTML CORRESPONDIENTE **/
 		return "";
 	}
+	
+	@RequestMapping("/inciDashboard/modifyStateIncidence/{id}/{state}")
+	public String modifyState(@PathVariable Long id, @PathVariable String state) {
+
+		incidenceService.modifyState(id,state);
+		
+		return "redirect:listIncidences";
+	}
 
 	@RequestMapping("/login")
 	public String login() {
