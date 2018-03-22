@@ -38,10 +38,10 @@ bin/kafka-server-start.sh config/server.properties
 
 Desde el interior del proyecto en la carpeta donde se encuentre el pom.xml
 
-mvn spring-boot:run	 mvn spring-boot:run
+mvn spring-boot:run
 
 Lanzar Base de Datos de prueba:
-Dentro de la carpeta del proyecto: (dirección: \InciDashboard_e5a\InciDashboard-e5a\hsqldb-2.4.0\hsqldb\bin)
+Dentro de la carpeta del proyecto: (dirección: \InciDashboard-e5a\hsqldb-2.4.0\hsqldb\bin)
 Ejecutar runServer.bat
 
 Para lanzar incidencias:
