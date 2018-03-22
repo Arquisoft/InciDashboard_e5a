@@ -16,8 +16,26 @@ Ismael Cadenas Alonso (UO251025)
 
 Daniel Bermejo Blanco (UO204115)
 
-# Para ejecutar (falta por completar)
+# Para ejecutar
 
 Desde la carpeta del proyecto:
+ 	 
+Lanzar zookeeper
 
-mvn spring-boot:run
+En Windows: 
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+En Unix:
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Lanzar kafka
+
+En Windows: 
+bin\windows\kafka-server-start.bat config\server.properties
+
+En Unix: 
+bin/kafka-server-start.sh config/server.properties
+
+Desde el interior del proyecto en la carpeta donde se encuentre el pom.xml
+
+mvn spring-boot:run	 mvn spring-boot:run
