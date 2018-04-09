@@ -2,6 +2,8 @@ language: java
 jdk:
 - oraclejdk8
 
+script: "mvn cobertura:cobertura"
+
 env:
   global:
   - ZOOKEEPER_PEERS=localhost:2181
