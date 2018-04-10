@@ -54,7 +54,7 @@ public class InsertSampleData {
 				new HashMap<String, String>(), Estado.ABIERTA));
 		
 		userService.addUser(new User("Admin", "", "admin@gmail.com", "admin", "Operador", "1234"));
-		
+		userService.addUser(new User("Susana","", "susana@gmail.com", "susana", "Operador", "1234"));
 		
 		incidenceRepository.save(incidences);
 		
