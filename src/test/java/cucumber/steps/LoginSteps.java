@@ -18,4 +18,9 @@ public class LoginSteps {
 	public void introduzco_el_email_y_contrasena(String email, String contrasena) throws Throwable {
 		System.out.println("Logeado usuario con email " + email);
 	}
+
+	@Then("^puedo entrar al sistema y se muestra el mensaje de bienvenida")
+	public void puedo_entrar_al_sistema() throws Throwable {
+		System.out.println("Mensaje de bienvenida mostrado");
+	}
 }
