@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/Arquisoft/Loader_e5a.svg?branch=master)](https://travis-ci.org/Arquisoft/InciDashboard_e5a)
+[![Build Status](https://travis-ci.org/Arquisoft/InciDashboard_e5a.svg?branch=master)](https://travis-ci.org/Arquisoft/InciDashboard_e5a)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/81ed23f28056410c9d542489fba9b901)](https://www.codacy.com/app/jelabra/InciDashboard_e5a?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Arquisoft/InciDashboard_e5a&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/Arquisoft/InciDashboard_e5a/branch/master/graph/badge.svg)](https://codecov.io/gh/Arquisoft/InciDashboard_e5a)
 
@@ -38,10 +38,10 @@ bin/kafka-server-start.sh config/server.properties
 
 Desde el interior del proyecto en la carpeta donde se encuentre el pom.xml
 
-mvn spring-boot:run	 mvn spring-boot:run
+mvn spring-boot:run
 
 Lanzar Base de Datos de prueba:
-Dentro de la carpeta del proyecto: (dirección: \InciDashboard_e5a\InciDashboard-e5a\hsqldb-2.4.0\hsqldb\bin)
+Dentro de la carpeta del proyecto: (dirección: \InciDashboard-e5a\hsqldb-2.4.0\hsqldb\bin)
 Ejecutar runServer.bat
 
 Para lanzar incidencias:
