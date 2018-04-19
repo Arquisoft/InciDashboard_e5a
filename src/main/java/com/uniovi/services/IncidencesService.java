@@ -12,34 +12,34 @@ import com.uniovi.repositories.IncidencesRepository;
 @Service
 public class IncidencesService {
 
-	@Autowired
-	IncidencesRepository incidencesRepository;
+    @Autowired
+    IncidencesRepository incidencesRepository;
 
-	public List<Incidence> getIncidences() {
-		List<Incidence> incidencias = new ArrayList<Incidence>();
-		incidencesRepository.findAll().forEach(incidencias::add);
-		return incidencias;
-	}
+    public List<Incidence> getIncidences() {
+	List<Incidence> incidencias = new ArrayList<Incidence>();
+	incidencesRepository.findAll().forEach(incidencias::add);
+	return incidencias;
+    }
 
-	public Incidence getIncidence(Long id) {
-		return incidencesRepository.findOne(id);
-	}
+    public Incidence getIncidence(Long id) {
+	return incidencesRepository.findOne(id);
+    }
 
-	public void modifyState(Long id, String state) {
-		Incidence inci = incidencesRepository.findOne(id);
-		
-		Estado estado = null;
-		if(state.toLowerCase().equals("abierta"))
-			estado = Estado.ABIERTA;
-		else if(state.toLowerCase().equals("cerrada"))
-			estado = Estado.CERRADA;
-		else if(state.toLowerCase().equals("solucionandola"))
-			estado = Estado.SOLUCIONANDOLA;
-		
-		if(estado != null) {
-			inci.setEstado(estado);
-			incidencesRepository.save(inci);
-		}
+    public void modifyState(Long id, String state) {
+	Incidence inci = incidencesRepository.findOne(id);
+
+	Estado estado = null;
+	if (state.toLowerCase().equals("abierta"))
+	    estado = Estado.ABIERTA;
+	else if (state.toLowerCase().equals("cerrada"))
+	    estado = Estado.CERRADA;
+	else if (state.toLowerCase().equals("solucionandola"))
+	    estado = Estado.SOLUCIONANDOLA;
+
+	if (estado != null) {
+	    inci.setEstado(estado);
+	    incidencesRepository.save(inci);
 	}
+    }
 
 }

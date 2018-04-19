@@ -19,49 +19,49 @@ import com.uniovi.repositories.UsersRepository;
 @Service
 public class InsertSampleData {
 
-	private List<Incidence> incidences;
-	
-	@Autowired
-	IncidencesRepository incidenceRepository;
-	
-	@Autowired
-	UserService userService;
+    private List<Incidence> incidences;
 
-	@PostConstruct
-	public void init() {
-		incidences = new ArrayList<Incidence>();
-		List<User> usuarios = new ArrayList<User>();
+    @Autowired
+    IncidencesRepository incidenceRepository;
 
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		
-		userService.addUser(new User("Admin", "", "admin@gmail.com", "admin", "Operador", "1234"));
-		
-		
-		incidenceRepository.save(incidences);
-		
-	}
+    @Autowired
+    UserService userService;
 
-	public List<Incidence> getIncidences() {
-		return incidences;
-	}
+    @PostConstruct
+    public void init() {
+	incidences = new ArrayList<Incidence>();
+	List<User> usuarios = new ArrayList<User>();
+
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+		new HashMap<String, String>(), Estado.ABIERTA));
+
+	userService.addUser(new User("Admin", "", "admin@gmail.com", "admin", "Operador", "1234"));
+	userService.addUser(new User("Susana", "", "susana@gmail.com", "susana", "Operador", "1234"));
+
+	incidenceRepository.save(incidences);
+
+    }
+
+    public List<Incidence> getIncidences() {
+	return incidences;
+    }
 
 }
