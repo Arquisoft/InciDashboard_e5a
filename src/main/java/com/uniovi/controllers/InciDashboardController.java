@@ -27,7 +27,7 @@ public class InciDashboardController {
     public String showInfo(Model model) {
 	List<Incidence> incidencias = incidenceService.getIncidences();
 	model.addAttribute("incidencesList", incidencias);
-	return "listIncidences";
+	return "/incidences/listIncidences";
     }
 
     @RequestMapping("/getEmitter")
@@ -51,7 +51,7 @@ public class InciDashboardController {
 
 	model.addAttribute("incidence", incidenceService.getIncidence(id));
 
-	return "detailsIncidence";
+	return "/incidences/detailsIncidence";
     }
 
     @RequestMapping("/inciDashboard/modifyStateIncidence/{id}")
@@ -69,7 +69,7 @@ public class InciDashboardController {
 
 	incidenceService.modifyState(id, state);
 
-	return "redirect:listIncidences";
+	return "redirect:/incidences/listIncidences";
     }
 
     @RequestMapping("/login")
