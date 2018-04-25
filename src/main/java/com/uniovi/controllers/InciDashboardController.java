@@ -76,5 +76,12 @@ public class InciDashboardController {
     public String login() {
 	return "login";
     }
+    
+    @RequestMapping("/verMapa/{latitud}/{longitud}")
+	public String getMap(Model model, @PathVariable double latitud, @PathVariable double longitud) {
+		model.addAttribute("latitud", latitud);
+		model.addAttribute("longitud", longitud);
+		return "incidences/map";
+}
 
 }
