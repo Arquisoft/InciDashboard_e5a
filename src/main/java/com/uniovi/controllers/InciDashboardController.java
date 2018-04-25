@@ -54,14 +54,13 @@ public class InciDashboardController {
 	return "/incidences/detailsIncidence";
     }
 
-    @RequestMapping("/inciDashboard/modifyStateIncidence/{id}")
+    @RequestMapping("/incidence/modify/{id}")
     public String modifyInfo(Model model, @PathVariable Long id) {
 
 	model.addAttribute("incidence", incidenceService.getIncidence(id));
 	model.addAttribute("listStates", Estado.values());
 
-	/** COMPLETAR: CREAR EL HTML CORRESPONDIENTE **/
-	return "";
+	return "/incidences/modifyIncidence";
     }
 
     @RequestMapping("/inciDashboard/modifyStateIncidence/{id}/{state}")
