@@ -7,8 +7,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.uniovi.model.Incidence;
@@ -66,6 +68,19 @@ public class InciDashboardController {
 		model.addAttribute("listStates", Estado.values());
 
 		return "/incidences/modifyIncidence";
+	}
+	
+	/**
+	 * Para guardar los datos modificados
+	 * @return
+	 */
+	@RequestMapping(value="/incidence/modify/{id}", method=RequestMethod.POST)
+	public String setModifyInfo(Model model, @PathVariable Long id, @ModelAttribute Incidence incidende) {
+		Incidence original = incidenceService.getIncidence(id); 
+		// Modificar solo estado
+		original.setEstado(incidende.getEstado());
+		incidenceService.modifyState(original);
+		return "redirect:/mark/details/"+id;
 	}
 
 	@RequestMapping("/login")

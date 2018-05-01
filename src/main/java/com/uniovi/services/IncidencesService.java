@@ -30,9 +30,7 @@ public class IncidencesService {
 		return incidencesRepository.findOne(id);
 	}
 
-	public void modifyState(Long id, Estado state) {
-		Incidence inci = incidencesRepository.findOne(id);
-		inci.setEstado(state);
+	public void modifyState(Incidence inci) {
 		incidencesRepository.save(inci);
 	}
 }
