@@ -24,38 +24,8 @@ public class InsertSampleData {
     @Autowired
     IncidencesRepository incidenceRepository;
 
-<<<<<<< HEAD
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
-				new HashMap<String, String>(), Estado.ABIERTA));
-		
-		userService.addUser(new User("Admin", "", "admin@gmail.com", "admin", "Operador", "1234"));
-		userService.addUser(new User("Susana","", "susana@gmail.com", "susana", "Operador", "1234"));
-		
-		incidenceRepository.save(incidences);
-		
-	}
-=======
     @Autowired
     UserService userService;
->>>>>>> rama_correcciones
 
     @PostConstruct
     public void init() {
