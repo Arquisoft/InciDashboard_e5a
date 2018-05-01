@@ -13,17 +13,17 @@ import java.util.*;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-	@Autowired
-	private UsersRepository usersRepository;
+    @Autowired
+    private UsersRepository usersRepository;
 
-	@Override
-	public UserDetails loadUserByUsername(String dni) throws UsernameNotFoundException {
-		User user = usersRepository.findByIdentificador(dni);
+    @Override
+    public UserDetails loadUserByUsername(String dni) throws UsernameNotFoundException {
+	User user = usersRepository.findByIdentificador(dni);
 
-		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-		grantedAuthorities.add(new SimpleGrantedAuthority("PUBLIC"));
+	Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+	grantedAuthorities.add(new SimpleGrantedAuthority("PUBLIC"));
 
-		return new org.springframework.security.core.userdetails.User(user.getIdentificador(), user.getPassword(),
-				grantedAuthorities);
-	}
+	return new org.springframework.security.core.userdetails.User(user.getIdentificador(), user.getPassword(),
+		grantedAuthorities);
+    }
 }

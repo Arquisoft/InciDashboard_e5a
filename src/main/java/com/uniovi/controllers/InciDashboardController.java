@@ -18,63 +18,63 @@ import com.uniovi.services.IncidencesService;
 @Controller
 public class InciDashboardController {
 
-	@Autowired
-	IncidencesService incidenceService;
+    @Autowired
+    IncidencesService incidenceService;
 
-	public List<SseEmitter> emitters = Collections.synchronizedList(new ArrayList<SseEmitter>());
+    public List<SseEmitter> emitters = Collections.synchronizedList(new ArrayList<SseEmitter>());
 
-	@RequestMapping("/listIncidences")
-	public String showInfo(Model model) {
-		List<Incidence> incidencias = incidenceService.getIncidences();
-		model.addAttribute("incidencesList", incidencias);
-		return "listIncidences";
-	}
+    @RequestMapping("/listIncidences")
+    public String showInfo(Model model) {
+	List<Incidence> incidencias = incidenceService.getIncidences();
+	model.addAttribute("incidencesList", incidencias);
+	return "listIncidences";
+    }
 
-	@RequestMapping("/getEmitter")
-	public SseEmitter getEmitter() {
-		return nuevoEmitter();
-	}
+    @RequestMapping("/getEmitter")
+    public SseEmitter getEmitter() {
+	return nuevoEmitter();
+    }
 
-	public SseEmitter nuevoEmitter() {
-		SseEmitter emitter = new SseEmitter(0L);
+    public SseEmitter nuevoEmitter() {
+	SseEmitter emitter = new SseEmitter(0L);
 
-		emitter.onTimeout(() -> emitters.remove(emitter));
-		emitter.onCompletion(() -> emitters.remove(emitter));
+	emitter.onTimeout(() -> emitters.remove(emitter));
+	emitter.onCompletion(() -> emitters.remove(emitter));
 
-		emitters.add(emitter);
+	emitters.add(emitter);
 
-		return emitter;
-	}
+	return emitter;
+    }
 
-	@RequestMapping("/inciDashboard/detailsIncidence/{id}")
-	public String getIncidenceInfo(Model model, @PathVariable Long id) {
+    @RequestMapping("/inciDashboard/detailsIncidence/{id}")
+    public String getIncidenceInfo(Model model, @PathVariable Long id) {
 
-		model.addAttribute("incidence", incidenceService.getIncidence(id));
+	model.addAttribute("incidence", incidenceService.getIncidence(id));
 
-		return "detailsIncidence";
-	}
+	return "detailsIncidence";
+    }
 
-	@RequestMapping("/inciDashboard/modifyStateIncidence/{id}")
-	public String modifyInfo(Model model, @PathVariable Long id) {
+    @RequestMapping("/inciDashboard/modifyStateIncidence/{id}")
+    public String modifyInfo(Model model, @PathVariable Long id) {
 
-		model.addAttribute("incidence", incidenceService.getIncidence(id));
-		model.addAttribute("listStates", Estado.values());
+	model.addAttribute("incidence", incidenceService.getIncidence(id));
+	model.addAttribute("listStates", Estado.values());
 
-		/** COMPLETAR: CREAR EL HTML CORRESPONDIENTE **/
-		return "";
-	}
-	
-	@RequestMapping("/inciDashboard/modifyStateIncidence/{id}/{state}")
-	public String modifyState(@PathVariable Long id, @PathVariable String state) {
+	/** COMPLETAR: CREAR EL HTML CORRESPONDIENTE **/
+	return "";
+    }
 
-		incidenceService.modifyState(id,state);
-		
-		return "redirect:listIncidences";
-	}
+    @RequestMapping("/inciDashboard/modifyStateIncidence/{id}/{state}")
+    public String modifyState(@PathVariable Long id, @PathVariable String state) {
 
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
-	}
+	incidenceService.modifyState(id, state);
+
+	return "redirect:listIncidences";
+    }
+
+    @RequestMapping("/login")
+    public String login() {
+	return "login";
+    }
 
 }

@@ -5,30 +5,31 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Propiedad {
 
-	private String nombre;
-	private String valor;
-	
-	public Propiedad() {}
+    private String nombre;
+    private String valor;
 
-	public Propiedad(String nombre, String valor) {
-		this.nombre = nombre;
-		this.valor = valor;
-	}
-	public String getNombre() {
-		return nombre;
-	}
+    public Propiedad() {
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public Propiedad(String nombre, String valor) {
+	this.nombre = nombre;
+	this.valor = valor;
+    }
 
-	public String getValor() {
-		return valor;
-	}
+    public String getNombre() {
+	return nombre;
+    }
 
-	public void setValor(String valor) {
-		this.valor = valor;
-	}
-	
-	
+    public void setNombre(String nombre) {
+	this.nombre = nombre;
+    }
+
+    public String getValor() {
+	return valor;
+    }
+
+    public void setValor(String valor) {
+	this.valor = valor;
+    }
+
 }

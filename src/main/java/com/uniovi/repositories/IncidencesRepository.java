@@ -11,9 +11,9 @@ import com.uniovi.model.Incidence;
 @Repository
 public interface IncidencesRepository extends CrudRepository<Incidence, Long> {
 
-//	@Query("SELECT i FROM Incidence i WHERE i.user.identificador = ?1")
-//	public Page<Incidence> findIncidences(Pageable page, String identificador);
-//
-//	@Query("SELECT i FROM Incidence i WHERE i.id = ?1")
-//	public Incidence findIncidence(Long id);
+    // @Query("SELECT i FROM Incidence i WHERE i.user.identificador = ?1")
+    // public Page<Incidence> findIncidences(Pageable page, String identificador);
+    //
+    // @Query("SELECT i FROM Incidence i WHERE i.id = ?1")
+    // public Incidence findIncidence(Long id);
 }
