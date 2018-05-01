@@ -10,8 +10,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uniovi.model.Estado;
 import com.uniovi.model.Incidence;
+import com.uniovi.model.Incidence.Estado;
 import com.uniovi.model.User;
 import com.uniovi.repositories.IncidencesRepository;
 import com.uniovi.repositories.UsersRepository;
