@@ -17,7 +17,7 @@ public class Incidence {
 
     private String nombre;
     private String descripcion;
-    private String localizacion;
+    private Location localizacion;
     @Transient
     private Set<String> etiquetas;
     private HashMap<String, String> campos;
@@ -60,12 +60,13 @@ public class Incidence {
 	this.descripcion = descripcion;
     }
 
-    public String getLocalizacion() {
+    public Location getLocalizacion() {
 	return localizacion;
     }
 
     public void setLocalizacion(String localizacion) {
-	this.localizacion = localizacion;
+
+    	this.localizacion = localizacion;
     }
 
     public Set<String> getEtiquetas() {
