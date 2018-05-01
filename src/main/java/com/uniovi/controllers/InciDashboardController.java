@@ -80,7 +80,7 @@ public class InciDashboardController {
 		// Modificar solo estado
 		original.setEstado(incidende.getEstado());
 		incidenceService.modifyState(original);
-		return "redirect:/mark/details/"+id;
+		return "redirect:/incidence/detailsIncidence/" + id;
 	}
 
 	@RequestMapping("/login")
