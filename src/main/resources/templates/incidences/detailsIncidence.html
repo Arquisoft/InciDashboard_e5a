@@ -19,7 +19,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Localizacion</div>
 			<div class="panel-body"
-				th:text="${incidence.localizacion.latitud - incidence.localizacion.longitud}"></div>
+				th:text="${incidence.localizacion.getLatitude()} + ' ; ' + ${incidence.localizacion.getLongitud()}"></div>
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">Estado</div>
