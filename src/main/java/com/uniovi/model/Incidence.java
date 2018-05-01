@@ -9,8 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
+/**
+ * Clase que representa una incidencia
+ * @author Tania Álvarez Díaz
+ *
+ */
 @Entity
 public class Incidence {
+	
+	public enum Estado {
+	    ABIERTA, CERRADA, SOLUCIONANDOLA
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
