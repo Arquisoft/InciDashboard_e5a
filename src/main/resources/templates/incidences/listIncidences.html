@@ -23,7 +23,7 @@
 					<tr th:each="incidence : ${incidencesList}">
 						<td th:text="${incidence.id}"></td>
 						<td th:text="${incidence.descripcion}"></td>
-						<td th:text="${incidence.localizacion.latitud - incidence.localizacion.longitud}"></td>
+						<td th:text="${incidence.localizacion.getLatitud()} - ${incidence.localizacion.getLongitud()}"></td>
 						<td th:text="${incidence.estado.valor}"></td>
 					</tr>					
 				</tbody>
