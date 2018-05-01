@@ -15,6 +15,11 @@ import com.uniovi.model.Incidence;
 import com.uniovi.model.Incidence.Estado;
 import com.uniovi.services.IncidencesService;
 
+/**
+ * Controlador principal. 
+ * @author Tania Álvarez Díaz
+ *
+ */
 @Controller
 public class InciDashboardController {
 
@@ -62,14 +67,6 @@ public class InciDashboardController {
 
 		return "/incidences/modifyIncidence";
 	}
-
-//	@RequestMapping("/inciDashboard/modifyStateIncidence/{id}/{state}")
-//	public String modifyState(@PathVariable Long id, @PathVariable Estado state) {
-//
-//		incidenceService.modifyState(id, state);
-//
-//		return "redirect:/incidences/listIncidences";
-//	}
 
 	@RequestMapping("/login")
 	public String login() {
