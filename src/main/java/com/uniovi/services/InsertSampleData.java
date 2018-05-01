@@ -32,25 +32,25 @@ public class InsertSampleData {
 	incidences = new ArrayList<Incidence>();
 	List<User> usuarios = new ArrayList<User>();
 
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.3579649;-5.8733862", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.5322065;-5.6611416000000645", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.5579767;-5.92448289999993", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.54212589999999;-6.536139700000035", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.5322065;-5.6611416000000645", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.3579649;-5.8733862", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.5579767;-5.92448289999993", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.5322065;-5.6611416000000645", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.3579649;-5.8733862", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
-	incidences.add(new Incidence("descripcion", "localizacion", new HashSet<String>(),
+	incidences.add(new Incidence("descripcion", "43.5579767;-5.92448289999993", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
 
 	userService.addUser(new User("Admin", "", "admin@gmail.com", "admin", "Operador", "1234"));

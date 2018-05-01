@@ -86,7 +86,7 @@ public class Incidence {
 	 * @return
 	 */
 	private Location obtenerLocalizacion(String localizacion) {
-		String[] trozos = localizacion.split("-");
+		String[] trozos = localizacion.split(";");
 		double latitude = Double.parseDouble(trozos[0]);
 		double longitud = Double.parseDouble(trozos[1]);
 		return new Location(latitude, longitud);
