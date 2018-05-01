@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.uniovi.model.Incidence;
@@ -18,7 +19,8 @@ import com.uniovi.model.Incidence.Estado;
 import com.uniovi.services.IncidencesService;
 
 /**
- * Controlador principal. 
+ * Controlador principal.
+ * 
  * @author Tania Álvarez Díaz
  *
  */
@@ -69,16 +71,17 @@ public class InciDashboardController {
 
 		return "/incidences/modifyIncidence";
 	}
-	
+
 	/**
 	 * Para guardar los datos modificados
+	 * 
 	 * @return
 	 */
-	@RequestMapping(value="/incidence/modify/{id}", method=RequestMethod.POST)
-	public String setModifyInfo(Model model, @PathVariable Long id, @ModelAttribute Incidence incidende) {
-		Incidence original = incidenceService.getIncidence(id); 
+	@RequestMapping(value = "/incidence/modify/{id}", method = RequestMethod.POST)
+	public String setModifyInfo(Model model, @PathVariable Long id, @ModelAttribute Incidence incidence, @RequestParam String newState) {
+		Incidence original = incidenceService.getIncidence(id);
 		// Modificar solo estado
-		original.setEstado(incidende.getEstado());
+		original.setEstado(Estado.valueOf(newState));
 		incidenceService.modifyState(original);
 		return "redirect:/incidence/detailsIncidence/" + id;
 	}
