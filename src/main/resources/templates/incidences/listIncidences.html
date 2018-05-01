@@ -25,8 +25,8 @@
 						<td th:text="${incidence.descripcion}"></td>
 						<td th:text="${incidence.localizacion.getLatitude()} + ' ; ' + ${incidence.localizacion.getLongitud()}"></td>
 						<td th:text="${incidence.estado}"></td>
-						<td><a th:href="${'/incidences/detailsIncidence/' + incidence.id}">Detalles</a></td>
-						<td><a th:href="${'/incidences/modify/' + incidence.id}">Modificar</a></td>
+						<td><a th:href="${'/incidence/detailsIncidence/' + incidence.id}">Detalles</a></td>
+						<td><a th:href="${'/incidence/modify/' + incidence.id}">Modificar</a></td>
 						<td><a th:href="${'/verMapa/' + incidence.localizacion.getLatitude() + '/' + incidence.localizacion.getLongitud()}">Ver mapa</a></td>
 					</tr>					
 				</tbody>
