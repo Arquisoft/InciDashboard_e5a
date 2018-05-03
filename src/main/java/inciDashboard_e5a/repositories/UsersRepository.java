@@ -1,8 +1,8 @@
-package com.uniovi.repositories;
+package inciDashboard_e5a.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.uniovi.model.User;
+import inciDashboard_e5a.model.User;
 
 public interface UsersRepository extends CrudRepository<User, Long> {
 

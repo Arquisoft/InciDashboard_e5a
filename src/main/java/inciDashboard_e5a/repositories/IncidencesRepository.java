@@ -1,4 +1,4 @@
-package com.uniovi.repositories;
+package inciDashboard_e5a.repositories;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.uniovi.model.Incidence;
+import inciDashboard_e5a.model.Incidence;
 
 @Repository
 public interface IncidencesRepository extends CrudRepository<Incidence, Long> {

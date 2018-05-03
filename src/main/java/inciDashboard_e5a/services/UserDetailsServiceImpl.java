@@ -1,7 +1,8 @@
-package com.uniovi.services;
+package inciDashboard_e5a.services;
 
-import com.uniovi.model.User;
-import com.uniovi.repositories.UsersRepository;
+import inciDashboard_e5a.model.User;
+import inciDashboard_e5a.repositories.UsersRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

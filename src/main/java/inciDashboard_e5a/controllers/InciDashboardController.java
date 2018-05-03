@@ -1,4 +1,4 @@
-package com.uniovi.controllers;
+package inciDashboard_e5a.controllers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import com.uniovi.model.Incidence;
-import com.uniovi.model.Incidence.Estado;
-import com.uniovi.services.IncidencesService;
+import inciDashboard_e5a.model.Incidence;
+import inciDashboard_e5a.model.Incidence.Estado;
+import inciDashboard_e5a.services.IncidencesService;
 
 /**
  * Controlador principal.

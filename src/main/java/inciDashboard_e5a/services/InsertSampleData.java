@@ -1,4 +1,4 @@
-package com.uniovi.services;
+package inciDashboard_e5a.services;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,11 +10,11 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uniovi.model.Incidence;
-import com.uniovi.model.Incidence.Estado;
-import com.uniovi.model.User;
-import com.uniovi.repositories.IncidencesRepository;
-import com.uniovi.repositories.UsersRepository;
+import inciDashboard_e5a.model.Incidence;
+import inciDashboard_e5a.model.User;
+import inciDashboard_e5a.model.Incidence.Estado;
+import inciDashboard_e5a.repositories.IncidencesRepository;
+import inciDashboard_e5a.repositories.UsersRepository;
 
 @Service
 public class InsertSampleData {

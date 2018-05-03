@@ -1,4 +1,4 @@
-package com.uniovi.apacheKafka;
+package inciDashboard_e5a.apacheKafka;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -8,11 +8,11 @@ import org.springframework.http.MediaType;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import com.uniovi.controllers.InciDashboardController;
-import com.uniovi.model.Incidence;
-import com.uniovi.model.Propiedad;
-import com.uniovi.model.User;
-import com.uniovi.repositories.UsersRepository;
+import inciDashboard_e5a.controllers.InciDashboardController;
+import inciDashboard_e5a.model.Incidence;
+import inciDashboard_e5a.model.Propiedad;
+import inciDashboard_e5a.model.User;
+import inciDashboard_e5a.repositories.UsersRepository;
 
 import java.io.IOException;
 import java.util.Arrays;

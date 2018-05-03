@@ -1,4 +1,4 @@
-package com.uniovi.model;
+package inciDashboard_e5a.model;
 
 import javax.persistence.Embeddable;
 
