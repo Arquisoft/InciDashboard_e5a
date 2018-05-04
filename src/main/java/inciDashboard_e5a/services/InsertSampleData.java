@@ -14,7 +14,6 @@ import inciDashboard_e5a.model.Incidence;
 import inciDashboard_e5a.model.User;
 import inciDashboard_e5a.model.Incidence.Estado;
 import inciDashboard_e5a.repositories.IncidencesRepository;
-import inciDashboard_e5a.repositories.UsersRepository;
 
 @Service
 public class InsertSampleData {
@@ -30,7 +29,6 @@ public class InsertSampleData {
     @PostConstruct
     public void init() {
 	incidences = new ArrayList<Incidence>();
-	List<User> usuarios = new ArrayList<User>();
 
 	incidences.add(new Incidence("descripcion", "43.3579649;-5.8733862", new HashSet<String>(),
 		new HashMap<String, String>(), Estado.ABIERTA));
