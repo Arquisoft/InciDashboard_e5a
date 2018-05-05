@@ -6,7 +6,7 @@
 	<groupId>es.uniovi.asw</groupId>
 	<artifactId>InciDashboard_e5a</artifactId>
 	<name>InciDashboard_e5a</name>
-	<version>0.0.1</version>
+	<version>0.2.1</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -18,7 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<start-class>asw.Application</start-class>
+		<start-class>inciDashboard_e5a.InciDashboardApplication</start-class>
 	</properties>
 
 	<dependencies>
